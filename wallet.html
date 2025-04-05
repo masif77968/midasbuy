@@ -1,0 +1,32 @@
+
+    <!-- Hidden phone number -->
+    <span id="phoneNumber" style="display:none;">03190994963</span>
+    
+    <!-- Button with custom image icon -->
+    <button onclick="copyPhoneNumber()">
+        <img src="https://t3.ftcdn.net/jpg/11/83/47/54/360_F_1183475446_k8l4cNjCFXoJdavC96dpCiMHFNgeU0dO.jpg" alt="Copy Icon" width="20"> Copy
+    </button>
+
+    <script>
+        function copyPhoneNumber() {
+            // Get the hidden phone number element
+            const phoneNumber = document.getElementById("phoneNumber").textContent;
+            
+            // Create a temporary textarea element
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = phoneNumber;
+            document.body.appendChild(tempTextArea);
+            
+            // Select and copy the phone number
+            tempTextArea.select();
+            document.execCommand("copy");
+            
+            // Remove the temporary textarea
+            document.body.removeChild(tempTextArea);
+            
+            // Alert the user
+            alert("Phone number copied to clipboard!");
+        }
+    </script>
+</body>
+</html>

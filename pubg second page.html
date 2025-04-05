@@ -14,11 +14,11 @@
     <div class="logo">PUBG UC Store</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="buy-uc.html">Buy UC</a></li>
-      <li><a href="#">How It Works</a></li>
-      <li><a href="#">Offers</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#" class="btn-login">Login/Sign Up</a></li>
+      <li><a href="featured-packages.html">Buy UC</a></li>
+      <li><a href="how-its-work.html">How It Works</a></li>
+      <li><a href="featured-packages.html">Offers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login-form.html" class="btn-login">Login/Sign Up</a></li>
     </ul>
   </nav>
 
@@ -33,11 +33,17 @@
           <input type="text" id="character-id" name="character-id" placeholder="Enter your PUBG Character ID" required>
         </div>
 
-        <!-- Payment Image Upload -->
-        <div class="form-group">
-          <label for="payment-image">Upload Payment Proof</label>
-          <input type="file" id="payment-image" name="payment-image" accept="image/*" required>
-        </div>
+<!-- Payment Image Upload -->
+<div class="form-group">
+  <label for="payment-image">
+    Upload Payment Proof - Easypaisa Rast Payments&nbsp;&nbsp;
+    <button onclick="copyText('PK68TMFB0000000067474738')" type="button" style="vertical-align: middle;">
+      <img src="https://t3.ftcdn.net/jpg/11/83/47/54/360_F_1183475446_k8l4cNjCFXoJdavC96dpCiMHFNgeU0dO.jpg" alt="Copy Icon" width="20"> Copy
+    </button>
+  </label>
+  <input type="file" id="payment-image" name="payment-image" accept="image/*" required>
+</div>
+
 
         <!-- Phone Number Input -->
         <div class="form-group">
@@ -65,7 +71,7 @@
       <div class="social-media">
         <h3>Follow Us</h3>
         <div class="social-icons">
-          <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+          <a href="#"><img src="instgram-icon.png" alt="Instagram"></a>
           <a href="#"><img src="discord-icon.png" alt="Discord"></a>
           <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
           <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
@@ -87,5 +93,17 @@
   <div class="live-chat">
     <a href="https://wa.me/your-whatsapp-number" target="_blank">💬 Live Chat</a>
   </div>
+  <script>
+  function copyText(text) {
+    const tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+    alert("Copied: " + text);
+  }
+</script>
+
 </body>
 </html>
